@@ -43,6 +43,9 @@ onMounted(() => {
       >
         &#60; Previous
       </router-link>
+      <router-link :to="{ name: 'event-list', query: { page: 1 } }"> 1 </router-link>
+      <router-link :to="{ name: 'event-list', query: { page: 2 } }"> 2 </router-link>
+      <router-link :to="{ name: 'event-list', query: { page: 3 } }"> 3 </router-link>
       <router-link
         id="page-next"
         :to="{ name: 'event-list', query: { page: page + 1 } }"
@@ -64,7 +67,8 @@ onMounted(() => {
 
 .pagination {
   display: flex;
-  width: 290px;
+  width: 400px;
+  margin-top: 1rem;
 }
 
 .pagination a {
