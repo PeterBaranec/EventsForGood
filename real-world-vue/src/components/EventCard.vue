@@ -8,18 +8,18 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink class="event-link" :to="{ name: 'event-details', params: { id: event.id } }">
+  <router-link class="event-link" :to="{ name: 'EventDetails', params: { id: event.id } }">
     <div class="event-card">
       <h2>{{ event.title }}</h2>
       <span>@{{ event.time }} on {{ event.date }}</span>
     </div>
-  </RouterLink>
+  </router-link>
 </template>
 
 <style scoped>
 .event-card {
   padding: 20px;
-  width: 350px;
+  width: 250px;
   cursor: pointer;
   border: 1px solid #39495c;
   margin-bottom: 18px;
